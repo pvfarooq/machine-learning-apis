@@ -4,3 +4,4 @@ scikit-learn
 isort
 black
 flake8
+uvicorn
