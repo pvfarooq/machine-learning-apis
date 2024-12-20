@@ -17,7 +17,7 @@ app = FastAPI()
 def predict_house_price(request: ApartmentRequest) -> ApartmentResponse:
     apartment_service = ApartmentService()
     try:
-        response = apartment_service.predict_price(request)
+        response = apartment_service.predict(request)
         return response
     except Exception as e:
         error = f"Failed to predict house price. (error: {str(e)})"
@@ -28,7 +28,7 @@ def predict_house_price(request: ApartmentRequest) -> ApartmentResponse:
 def predict_salary(request: SalaryRequest) -> SalaryResponse:
     salary_service = SalaryService()
     try:
-        response = salary_service.predict_price(request)
+        response = salary_service.predict(request)
         return response
     except Exception as e:
         error = f"Failed to predict salary. (error: {str(e)})"
