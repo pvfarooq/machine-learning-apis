@@ -24,5 +24,5 @@ class ArtifactLoader(ABC):
         pass
 
     @abstractmethod
-    def predict_price(self, request: dict) -> dict:
+    def predict(self, request: dict) -> dict:
         pass

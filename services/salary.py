@@ -19,7 +19,7 @@ class SalaryService(ArtifactLoader):
         data_df = pd.DataFrame.from_dict([data_dict])
         return data_df
 
-    def predict_price(self, request: SalaryRequest) -> SalaryResponse:
+    def predict(self, request: SalaryRequest) -> SalaryResponse:
         input_df = self.preprocess_input(request)
         salary = round(self.model.predict(input_df)[0], 2)
         response = SalaryResponse
